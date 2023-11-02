@@ -17,6 +17,7 @@ mongoose.connect(connection_url).then(() => {
   }).catch((error)=> console.error(error))
 
 app.use('/api',authRoutes)
+app.use('/api',require('./routes/contact'))
 app.listen(process.env.PORT,()=>{
     console.log(`Server listening on port ${process.env.PORT}`)
 })
